@@ -1,0 +1,907 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/reactjs/react-timer-mixin"
+
+    >react-timer-mixin (v0.13.3)</a>
+</h1>
+<h4>TimerMixin provides timer functions for executing code in the future that are safely cleaned up when the component unmounts</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-timer-mixin">module react-timer-mixin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-timer-mixin.cancelAnimationFrame">
+            function <span class="apidocSignatureSpan">react-timer-mixin.</span>cancelAnimationFrame
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-timer-mixin.clearImmediate">
+            function <span class="apidocSignatureSpan">react-timer-mixin.</span>clearImmediate
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-timer-mixin.clearInterval">
+            function <span class="apidocSignatureSpan">react-timer-mixin.</span>clearInterval
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-timer-mixin.clearTimeout">
+            function <span class="apidocSignatureSpan">react-timer-mixin.</span>clearTimeout
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-timer-mixin.componentWillUnmount">
+            function <span class="apidocSignatureSpan">react-timer-mixin.</span>componentWillUnmount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-timer-mixin.requestAnimationFrame">
+            function <span class="apidocSignatureSpan">react-timer-mixin.</span>requestAnimationFrame
+            <span class="apidocSignatureSpan">(callback, delta)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-timer-mixin.setImmediate">
+            function <span class="apidocSignatureSpan">react-timer-mixin.</span>setImmediate
+            <span class="apidocSignatureSpan">(callback, delta)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-timer-mixin.setInterval">
+            function <span class="apidocSignatureSpan">react-timer-mixin.</span>setInterval
+            <span class="apidocSignatureSpan">(callback, delta)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-timer-mixin.setTimeout">
+            function <span class="apidocSignatureSpan">react-timer-mixin.</span>setTimeout
+            <span class="apidocSignatureSpan">(callback, delta)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-timer-mixin.cancelAnimationFrame">module react-timer-mixin.cancelAnimationFrame</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-timer-mixin.cancelAnimationFrame.cancelAnimationFrame">
+            function <span class="apidocSignatureSpan">react-timer-mixin.</span>cancelAnimationFrame
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-timer-mixin.clearImmediate">module react-timer-mixin.clearImmediate</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-timer-mixin.clearImmediate.clearImmediate">
+            function <span class="apidocSignatureSpan">react-timer-mixin.</span>clearImmediate
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-timer-mixin.clearInterval">module react-timer-mixin.clearInterval</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-timer-mixin.clearInterval.clearInterval">
+            function <span class="apidocSignatureSpan">react-timer-mixin.</span>clearInterval
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-timer-mixin.clearTimeout">module react-timer-mixin.clearTimeout</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-timer-mixin.clearTimeout.clearTimeout">
+            function <span class="apidocSignatureSpan">react-timer-mixin.</span>clearTimeout
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-timer-mixin.componentWillUnmount">module react-timer-mixin.componentWillUnmount</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-timer-mixin.componentWillUnmount.componentWillUnmount">
+            function <span class="apidocSignatureSpan">react-timer-mixin.</span>componentWillUnmount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-timer-mixin.requestAnimationFrame">module react-timer-mixin.requestAnimationFrame</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-timer-mixin.requestAnimationFrame.requestAnimationFrame">
+            function <span class="apidocSignatureSpan">react-timer-mixin.</span>requestAnimationFrame
+            <span class="apidocSignatureSpan">(callback, delta)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-timer-mixin.setImmediate">module react-timer-mixin.setImmediate</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-timer-mixin.setImmediate.setImmediate">
+            function <span class="apidocSignatureSpan">react-timer-mixin.</span>setImmediate
+            <span class="apidocSignatureSpan">(callback, delta)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-timer-mixin.setInterval">module react-timer-mixin.setInterval</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-timer-mixin.setInterval.setInterval">
+            function <span class="apidocSignatureSpan">react-timer-mixin.</span>setInterval
+            <span class="apidocSignatureSpan">(callback, delta)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-timer-mixin.setTimeout">module react-timer-mixin.setTimeout</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-timer-mixin.setTimeout.setTimeout">
+            function <span class="apidocSignatureSpan">react-timer-mixin.</span>setTimeout
+            <span class="apidocSignatureSpan">(callback, delta)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-timer-mixin" id="apidoc.module.react-timer-mixin">module react-timer-mixin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-timer-mixin.cancelAnimationFrame" id="apidoc.element.react-timer-mixin.cancelAnimationFrame">
+        function <span class="apidocSignatureSpan">react-timer-mixin.</span>cancelAnimationFrame
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cancelAnimationFrame = function (id) {
+  if (this[array]) {
+    var index = this[array].indexOf(id);
+    if (index !== -1) {
+      this[array].splice(index, 1);
+    }
+  }
+  _clearer(id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+  this[_intervals] = null;
+  this[_immediates] &#x26;&#x26; this[_immediates].forEach(function(id) {
+    GLOBAL.clearImmediate(id);
+  });
+  this[_immediates] = null;
+  this[_rafs] &#x26;&#x26; this[_rafs].forEach(function(id) {
+    GLOBAL.<span class="apidocCodeKeywordSpan">cancelAnimationFrame</span>(id);
+  });
+  this[_rafs] = null;
+},
+
+setTimeout: _setTimeout,
+clearTimeout: _clearTimeout,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-timer-mixin.clearImmediate" id="apidoc.element.react-timer-mixin.clearImmediate">
+        function <span class="apidocSignatureSpan">react-timer-mixin.</span>clearImmediate
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clearImmediate = function (id) {
+  if (this[array]) {
+    var index = this[array].indexOf(id);
+    if (index !== -1) {
+      this[array].splice(index, 1);
+    }
+  }
+  _clearer(id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+  this[_timeouts] = null;
+  this[_intervals] &#x26;&#x26; this[_intervals].forEach(function(id) {
+    GLOBAL.clearInterval(id);
+  });
+  this[_intervals] = null;
+  this[_immediates] &#x26;&#x26; this[_immediates].forEach(function(id) {
+    GLOBAL.<span class="apidocCodeKeywordSpan">clearImmediate</span>(id);
+  });
+  this[_immediates] = null;
+  this[_rafs] &#x26;&#x26; this[_rafs].forEach(function(id) {
+    GLOBAL.cancelAnimationFrame(id);
+  });
+  this[_rafs] = null;
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-timer-mixin.clearInterval" id="apidoc.element.react-timer-mixin.clearInterval">
+        function <span class="apidocSignatureSpan">react-timer-mixin.</span>clearInterval
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clearInterval = function (id) {
+  if (this[array]) {
+    var index = this[array].indexOf(id);
+    if (index !== -1) {
+      this[array].splice(index, 1);
+    }
+  }
+  _clearer(id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var TimerMixin = {
+componentWillUnmount: function() {
+  this[_timeouts] &#x26;&#x26; this[_timeouts].forEach(function(id) {
+    GLOBAL.clearTimeout(id);
+  });
+  this[_timeouts] = null;
+  this[_intervals] &#x26;&#x26; this[_intervals].forEach(function(id) {
+    GLOBAL.<span class="apidocCodeKeywordSpan">clearInterval</span>(id);
+  });
+  this[_intervals] = null;
+  this[_immediates] &#x26;&#x26; this[_immediates].forEach(function(id) {
+    GLOBAL.clearImmediate(id);
+  });
+  this[_immediates] = null;
+  this[_rafs] &#x26;&#x26; this[_rafs].forEach(function(id) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-timer-mixin.clearTimeout" id="apidoc.element.react-timer-mixin.clearTimeout">
+        function <span class="apidocSignatureSpan">react-timer-mixin.</span>clearTimeout
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clearTimeout = function (id) {
+  if (this[array]) {
+    var index = this[array].indexOf(id);
+    if (index !== -1) {
+      this[array].splice(index, 1);
+    }
+  }
+  _clearer(id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var _rafs = &#x27;TimerMixin_rafs&#x27;;
+var _cancelAnimationFrame = clearer(GLOBAL.cancelAnimationFrame, _rafs);
+var _requestAnimationFrame = setter(GLOBAL.requestAnimationFrame, _cancelAnimationFrame, _rafs);
+
+var TimerMixin = {
+componentWillUnmount: function() {
+  this[_timeouts] &#x26;&#x26; this[_timeouts].forEach(function(id) {
+    GLOBAL.<span class="apidocCodeKeywordSpan">clearTimeout</span>(id);
+  });
+  this[_timeouts] = null;
+  this[_intervals] &#x26;&#x26; this[_intervals].forEach(function(id) {
+    GLOBAL.clearInterval(id);
+  });
+  this[_intervals] = null;
+  this[_immediates] &#x26;&#x26; this[_immediates].forEach(function(id) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-timer-mixin.componentWillUnmount" id="apidoc.element.react-timer-mixin.componentWillUnmount">
+        function <span class="apidocSignatureSpan">react-timer-mixin.</span>componentWillUnmount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">componentWillUnmount = function () {
+  this[_timeouts] &#x26;&#x26; this[_timeouts].forEach(function(id) {
+    GLOBAL.clearTimeout(id);
+  });
+  this[_timeouts] = null;
+  this[_intervals] &#x26;&#x26; this[_intervals].forEach(function(id) {
+    GLOBAL.clearInterval(id);
+  });
+  this[_intervals] = null;
+  this[_immediates] &#x26;&#x26; this[_immediates].forEach(function(id) {
+    GLOBAL.clearImmediate(id);
+  });
+  this[_immediates] = null;
+  this[_rafs] &#x26;&#x26; this[_rafs].forEach(function(id) {
+    GLOBAL.cancelAnimationFrame(id);
+  });
+  this[_rafs] = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-timer-mixin.requestAnimationFrame" id="apidoc.element.react-timer-mixin.requestAnimationFrame">
+        function <span class="apidocSignatureSpan">react-timer-mixin.</span>requestAnimationFrame
+        <span class="apidocSignatureSpan">(callback, delta)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">requestAnimationFrame = function (callback, delta) {
+  var id = _setter(function() {
+    _clearer.call(this, id);
+    callback.apply(this, arguments);
+  }.bind(this), delta);
+
+  if (!this[array]) {
+    this[array] = [id];
+  } else {
+    this[array].push(id);
+  }
+  return id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-timer-mixin.setImmediate" id="apidoc.element.react-timer-mixin.setImmediate">
+        function <span class="apidocSignatureSpan">react-timer-mixin.</span>setImmediate
+        <span class="apidocSignatureSpan">(callback, delta)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setImmediate = function (callback, delta) {
+  var id = _setter(function() {
+    _clearer.call(this, id);
+    callback.apply(this, arguments);
+  }.bind(this), delta);
+
+  if (!this[array]) {
+    this[array] = [id];
+  } else {
+    this[array].push(id);
+  }
+  return id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-timer-mixin.setInterval" id="apidoc.element.react-timer-mixin.setInterval">
+        function <span class="apidocSignatureSpan">react-timer-mixin.</span>setInterval
+        <span class="apidocSignatureSpan">(callback, delta)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setInterval = function (callback, delta) {
+  var id = _setter(function() {
+    _clearer.call(this, id);
+    callback.apply(this, arguments);
+  }.bind(this), delta);
+
+  if (!this[array]) {
+    this[array] = [id];
+  } else {
+    this[array].push(id);
+  }
+  return id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-timer-mixin.setTimeout" id="apidoc.element.react-timer-mixin.setTimeout">
+        function <span class="apidocSignatureSpan">react-timer-mixin.</span>setTimeout
+        <span class="apidocSignatureSpan">(callback, delta)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setTimeout = function (callback, delta) {
+  var id = _setter(function() {
+    _clearer.call(this, id);
+    callback.apply(this, arguments);
+  }.bind(this), delta);
+
+  if (!this[array]) {
+    this[array] = [id];
+  } else {
+    this[array].push(id);
+  }
+  return id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+# react-timer-mixin
+
+Using bare setTimeout, setInterval, setImmediate and requestAnimationFrame calls
+is very dangerous because if you forget to cancel the request before the
+component is unmounted, you risk the callback throwing an exception.
+
+If you include TimerMixin, then you can replace your calls to
+`setTimeout(fn, 500)` with `this.<span class="apidocCodeKeywordSpan">setTimeout</span>(fn, 500)` (just prepend `this.`) and
+everything will be properly cleaned up for you.
+
+## Installation
+
+Install the module directly from npm:
+
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-timer-mixin.cancelAnimationFrame" id="apidoc.module.react-timer-mixin.cancelAnimationFrame">module react-timer-mixin.cancelAnimationFrame</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-timer-mixin.cancelAnimationFrame.cancelAnimationFrame" id="apidoc.element.react-timer-mixin.cancelAnimationFrame.cancelAnimationFrame">
+        function <span class="apidocSignatureSpan">react-timer-mixin.</span>cancelAnimationFrame
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cancelAnimationFrame = function (id) {
+  if (this[array]) {
+    var index = this[array].indexOf(id);
+    if (index !== -1) {
+      this[array].splice(index, 1);
+    }
+  }
+  _clearer(id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+  this[_intervals] = null;
+  this[_immediates] &#x26;&#x26; this[_immediates].forEach(function(id) {
+    GLOBAL.clearImmediate(id);
+  });
+  this[_immediates] = null;
+  this[_rafs] &#x26;&#x26; this[_rafs].forEach(function(id) {
+    GLOBAL.<span class="apidocCodeKeywordSpan">cancelAnimationFrame</span>(id);
+  });
+  this[_rafs] = null;
+},
+
+setTimeout: _setTimeout,
+clearTimeout: _clearTimeout,
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-timer-mixin.clearImmediate" id="apidoc.module.react-timer-mixin.clearImmediate">module react-timer-mixin.clearImmediate</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-timer-mixin.clearImmediate.clearImmediate" id="apidoc.element.react-timer-mixin.clearImmediate.clearImmediate">
+        function <span class="apidocSignatureSpan">react-timer-mixin.</span>clearImmediate
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clearImmediate = function (id) {
+  if (this[array]) {
+    var index = this[array].indexOf(id);
+    if (index !== -1) {
+      this[array].splice(index, 1);
+    }
+  }
+  _clearer(id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+  this[_timeouts] = null;
+  this[_intervals] &#x26;&#x26; this[_intervals].forEach(function(id) {
+    GLOBAL.clearInterval(id);
+  });
+  this[_intervals] = null;
+  this[_immediates] &#x26;&#x26; this[_immediates].forEach(function(id) {
+    GLOBAL.<span class="apidocCodeKeywordSpan">clearImmediate</span>(id);
+  });
+  this[_immediates] = null;
+  this[_rafs] &#x26;&#x26; this[_rafs].forEach(function(id) {
+    GLOBAL.cancelAnimationFrame(id);
+  });
+  this[_rafs] = null;
+},
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-timer-mixin.clearInterval" id="apidoc.module.react-timer-mixin.clearInterval">module react-timer-mixin.clearInterval</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-timer-mixin.clearInterval.clearInterval" id="apidoc.element.react-timer-mixin.clearInterval.clearInterval">
+        function <span class="apidocSignatureSpan">react-timer-mixin.</span>clearInterval
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clearInterval = function (id) {
+  if (this[array]) {
+    var index = this[array].indexOf(id);
+    if (index !== -1) {
+      this[array].splice(index, 1);
+    }
+  }
+  _clearer(id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var TimerMixin = {
+componentWillUnmount: function() {
+  this[_timeouts] &#x26;&#x26; this[_timeouts].forEach(function(id) {
+    GLOBAL.clearTimeout(id);
+  });
+  this[_timeouts] = null;
+  this[_intervals] &#x26;&#x26; this[_intervals].forEach(function(id) {
+    GLOBAL.<span class="apidocCodeKeywordSpan">clearInterval</span>(id);
+  });
+  this[_intervals] = null;
+  this[_immediates] &#x26;&#x26; this[_immediates].forEach(function(id) {
+    GLOBAL.clearImmediate(id);
+  });
+  this[_immediates] = null;
+  this[_rafs] &#x26;&#x26; this[_rafs].forEach(function(id) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-timer-mixin.clearTimeout" id="apidoc.module.react-timer-mixin.clearTimeout">module react-timer-mixin.clearTimeout</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-timer-mixin.clearTimeout.clearTimeout" id="apidoc.element.react-timer-mixin.clearTimeout.clearTimeout">
+        function <span class="apidocSignatureSpan">react-timer-mixin.</span>clearTimeout
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clearTimeout = function (id) {
+  if (this[array]) {
+    var index = this[array].indexOf(id);
+    if (index !== -1) {
+      this[array].splice(index, 1);
+    }
+  }
+  _clearer(id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var _rafs = &#x27;TimerMixin_rafs&#x27;;
+var _cancelAnimationFrame = clearer(GLOBAL.cancelAnimationFrame, _rafs);
+var _requestAnimationFrame = setter(GLOBAL.requestAnimationFrame, _cancelAnimationFrame, _rafs);
+
+var TimerMixin = {
+componentWillUnmount: function() {
+  this[_timeouts] &#x26;&#x26; this[_timeouts].forEach(function(id) {
+    GLOBAL.<span class="apidocCodeKeywordSpan">clearTimeout</span>(id);
+  });
+  this[_timeouts] = null;
+  this[_intervals] &#x26;&#x26; this[_intervals].forEach(function(id) {
+    GLOBAL.clearInterval(id);
+  });
+  this[_intervals] = null;
+  this[_immediates] &#x26;&#x26; this[_immediates].forEach(function(id) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-timer-mixin.componentWillUnmount" id="apidoc.module.react-timer-mixin.componentWillUnmount">module react-timer-mixin.componentWillUnmount</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-timer-mixin.componentWillUnmount.componentWillUnmount" id="apidoc.element.react-timer-mixin.componentWillUnmount.componentWillUnmount">
+        function <span class="apidocSignatureSpan">react-timer-mixin.</span>componentWillUnmount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">componentWillUnmount = function () {
+  this[_timeouts] &#x26;&#x26; this[_timeouts].forEach(function(id) {
+    GLOBAL.clearTimeout(id);
+  });
+  this[_timeouts] = null;
+  this[_intervals] &#x26;&#x26; this[_intervals].forEach(function(id) {
+    GLOBAL.clearInterval(id);
+  });
+  this[_intervals] = null;
+  this[_immediates] &#x26;&#x26; this[_immediates].forEach(function(id) {
+    GLOBAL.clearImmediate(id);
+  });
+  this[_immediates] = null;
+  this[_rafs] &#x26;&#x26; this[_rafs].forEach(function(id) {
+    GLOBAL.cancelAnimationFrame(id);
+  });
+  this[_rafs] = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-timer-mixin.requestAnimationFrame" id="apidoc.module.react-timer-mixin.requestAnimationFrame">module react-timer-mixin.requestAnimationFrame</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-timer-mixin.requestAnimationFrame.requestAnimationFrame" id="apidoc.element.react-timer-mixin.requestAnimationFrame.requestAnimationFrame">
+        function <span class="apidocSignatureSpan">react-timer-mixin.</span>requestAnimationFrame
+        <span class="apidocSignatureSpan">(callback, delta)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">requestAnimationFrame = function (callback, delta) {
+  var id = _setter(function() {
+    _clearer.call(this, id);
+    callback.apply(this, arguments);
+  }.bind(this), delta);
+
+  if (!this[array]) {
+    this[array] = [id];
+  } else {
+    this[array].push(id);
+  }
+  return id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-timer-mixin.setImmediate" id="apidoc.module.react-timer-mixin.setImmediate">module react-timer-mixin.setImmediate</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-timer-mixin.setImmediate.setImmediate" id="apidoc.element.react-timer-mixin.setImmediate.setImmediate">
+        function <span class="apidocSignatureSpan">react-timer-mixin.</span>setImmediate
+        <span class="apidocSignatureSpan">(callback, delta)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setImmediate = function (callback, delta) {
+  var id = _setter(function() {
+    _clearer.call(this, id);
+    callback.apply(this, arguments);
+  }.bind(this), delta);
+
+  if (!this[array]) {
+    this[array] = [id];
+  } else {
+    this[array].push(id);
+  }
+  return id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-timer-mixin.setInterval" id="apidoc.module.react-timer-mixin.setInterval">module react-timer-mixin.setInterval</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-timer-mixin.setInterval.setInterval" id="apidoc.element.react-timer-mixin.setInterval.setInterval">
+        function <span class="apidocSignatureSpan">react-timer-mixin.</span>setInterval
+        <span class="apidocSignatureSpan">(callback, delta)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setInterval = function (callback, delta) {
+  var id = _setter(function() {
+    _clearer.call(this, id);
+    callback.apply(this, arguments);
+  }.bind(this), delta);
+
+  if (!this[array]) {
+    this[array] = [id];
+  } else {
+    this[array].push(id);
+  }
+  return id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-timer-mixin.setTimeout" id="apidoc.module.react-timer-mixin.setTimeout">module react-timer-mixin.setTimeout</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-timer-mixin.setTimeout.setTimeout" id="apidoc.element.react-timer-mixin.setTimeout.setTimeout">
+        function <span class="apidocSignatureSpan">react-timer-mixin.</span>setTimeout
+        <span class="apidocSignatureSpan">(callback, delta)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setTimeout = function (callback, delta) {
+  var id = _setter(function() {
+    _clearer.call(this, id);
+    callback.apply(this, arguments);
+  }.bind(this), delta);
+
+  if (!this[array]) {
+    this[array] = [id];
+  } else {
+    this[array].push(id);
+  }
+  return id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+# react-timer-mixin
+
+Using bare setTimeout, setInterval, setImmediate and requestAnimationFrame calls
+is very dangerous because if you forget to cancel the request before the
+component is unmounted, you risk the callback throwing an exception.
+
+If you include TimerMixin, then you can replace your calls to
+`setTimeout(fn, 500)` with `this.<span class="apidocCodeKeywordSpan">setTimeout</span>(fn, 500)` (just prepend `this.`) and
+everything will be properly cleaned up for you.
+
+## Installation
+
+Install the module directly from npm:
+
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
