@@ -1,1 +1,39 @@
-{     "devDependencies": {         "react-timer-mixin": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-react-timer-mixin",     "homepage": "https://github.com/npmdoc/node-npmdoc-react-timer-mixin",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-react-timer-mixin.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "api documentation for [react-timer-mixin (v0.13.3)](https://github.com/reactjs/react-timer-mixin) [![npm package](https://img.shields.io/npm/v/npmdoc-react-timer-mixin.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-react-timer-mixin) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-react-timer-mixin.svg)](https://travis-ci.org/npmdoc/node-npmdoc-react-timer-mixin)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "react-timer-mixin": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-react-timer-mixin",
+    "keywords": [
+        "documentation",
+        "react-timer-mixin"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_react_timer_mixin.js",
+    "name": "npmdoc-react-timer-mixin",
+    "nameAlias": "npmdoc_react_timer_mixin",
+    "nameOriginal": "npmdoc-react-timer-mixin",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-react-timer-mixin.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
