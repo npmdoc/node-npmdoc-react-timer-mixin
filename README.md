@@ -1,4 +1,7 @@
-# api documentation for  [react-timer-mixin (v0.13.3)](https://github.com/reactjs/react-timer-mixin)  [![npm package](https://img.shields.io/npm/v/npmdoc-react-timer-mixin.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-react-timer-mixin) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-react-timer-mixin.svg)](https://travis-ci.org/npmdoc/node-npmdoc-react-timer-mixin)
+# npmdoc-react-timer-mixin
+
+#### api documentation for  [react-timer-mixin (v0.13.3)](https://github.com/reactjs/react-timer-mixin)  [![npm package](https://img.shields.io/npm/v/npmdoc-react-timer-mixin.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-react-timer-mixin) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-react-timer-mixin.svg)](https://travis-ci.org/npmdoc/node-npmdoc-react-timer-mixin)
+
 #### TimerMixin provides timer functions for executing code in the future that are safely cleaned up when the component unmounts
 
 [![NPM](https://nodei.co/npm/react-timer-mixin.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/react-timer-mixin)
